@@ -58,3 +58,22 @@ def relation_to_luke(name):
             return"Luke, I am your droid."
 print("Luke, I am your father.", ":", relation_to_luke("Darth Vader"))
 print("Luke, I am your sister.", ":", relation_to_luke("Leia"))
+
+def is_leap(year):
+    return  year % 4 == 0
+print(False, ':', is_leap(1990))
+print(True, ':', is_leap(1992))
+
+def fizz(max):
+    for i in range(max):
+        if i % 15 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+fizz(90)
+
+def get_integer()
