@@ -74,6 +74,41 @@ def fizz(max):
             print("Buzz")
         else:
             print(i)
-fizz(90)
+# fizz(90)
 
-def get_integer()
+def caught_speeding(speed, is_birthday):
+    speeding_threshold = (65,85) if is_birthday else (60,80)
+    if speed > speeding_threshold[1]:
+        return 2
+    elif speed > speeding_threshold[0]:
+        return 1
+    else:
+        return 0
+
+print(0, ':', caught_speeding(60, False))
+print(1, ':', caught_speeding(66, True))
+print(1, ':', caught_speeding(84, True))
+print(2, ':', caught_speeding(81, False))
+
+def make_bricks(small, big, goal):
+    # if big * 5 + small < goal:
+    #     return 'fail 1'
+    # elif goal % 5 > small:
+    #     return 'fail 2'
+
+    # return False
+    return (goal % 5) <= small and (goal - (big * 5)) <= small
+
+print(True, ':', make_bricks(2, 2, 15))
+print(False, ':', make_bricks(2, 2, 8))
+print(True, ':', make_bricks(2, 2, 7))
+print(True, ':', make_bricks(2, 4, 7))
+
+def double_char(str):
+    str_arr = []
+    for i in str:
+        str_arr.append(i+i)
+    
+    return ''.join(str_arr)
+
+print(double_char('hello'))
