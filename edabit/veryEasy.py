@@ -46,3 +46,30 @@ def get_first_value(list):
 	return list[0]
 print(3, ':', [3, 4, 5, 9, 8])
 
+
+# Question:
+# Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
+# between a range inclusively.
+# The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+def are_divisible_by_seven_not_five(min, max):
+	arr = []
+	for i in range(min, max):
+		if i % 7 == 0 and i % 5 != 0:
+			arr.append(str(i))
+
+	return ','.join(arr)
+
+print(are_divisible_by_seven_not_five(100,400))
+print(are_divisible_by_seven_not_five(8,150))
+
+# Write a program which can compute the factorial of a given numbers.
+# The results should be printed in a comma-separated sequence on a single line.
+# Suppose the following input is supplied to the program:
+
+def fact(num):
+	if num == 0:
+		return 1
+	return num * fact(num - 1)
+
+print(fact(5))
